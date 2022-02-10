@@ -10,7 +10,6 @@ def start_server():
     subprocess.run(["iperf3", "-s",
                     "-p", PORT,
                     "--daemon"])
-    yield
 
 
 @pytest.fixture

@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from typing import Union
 
 
 def read_tmp_file(filepath: Path):
@@ -20,5 +21,5 @@ class Converter:
         return val >> 20
 
     @staticmethod
-    def bits_to_mbits(val):
+    def bits_to_mbits(val: Union[float, int]):
         return val / 1_000_000
