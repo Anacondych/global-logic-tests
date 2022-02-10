@@ -23,7 +23,7 @@ def start_client():
     def _inner(*args):
         """Fixture to start client sending transmission."""
         client = subprocess.run(["iperf3",
-                                 "-c1", HOST, "-p", PORT,
+                                 "-c", HOST, "-p", PORT,
                                  *args])
         if client.returncode != 0:
             raise Exception(IperfErrorMessages.CLIENT_NOT_LAUNCHED.value)
